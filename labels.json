@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
@@ -13,12 +14,24 @@
       "labels": ["type/patch"]
     },
     {
+      "matchUpdateTypes": ["digest"],
+      "labels": ["type/digest"]
+    },
+    {
       "matchDatasources": ["helm"],
       "addLabels": ["renovate/helm"]
     },
     {
       "matchDatasources": ["docker"],
       "addLabels": ["renovate/container"]
+    },
+    {
+      "matchDatasources": ["github-releases", "github-tags"],
+      "addLabels": ["renovate/github-release"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["renovate/github-action"]
     }
   ]
 }

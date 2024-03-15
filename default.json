@@ -1,25 +1,26 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
+    "docker:enableMajor",
+    ":automergeBranch",
+    ":automergeDigest",
     ":dependencyDashboard",
     ":disableRateLimiting",
-    "docker:enableMajor",
-    "docker:pinDigests",
-    ":automergeDigest",
     ":enablePreCommit",
+    ":semanticCommits",
+    ":separatePatchReleases",
+    "github>szinn/renovate-config:automerge-github-actions",
     "github>szinn/renovate-config:commit-message",
-    "github>szinn/renovate-config:pr-labels",
+    "github>szinn/renovate-config:generic-regex-manager",
+    "github>szinn/renovate-config:labels",
     "github>szinn/renovate-config:semantic-commits",
-    "github>szinn/renovate-config:generic-regex-manager"
+    "helpers:pinGitHubActionDigests"
   ],
-  "platform": "github",
-  "onboarding": false,
-  "requireConfig": "optional",
-  "username": "repo-jeeves[bot]",
-  "gitAuthor": "repo-jeeves <106431701+repo-jeeves[bot]@users.noreply.github.com>",
   "timezone": "America/Toronto",
   "dependencyDashboardTitle": "Renovate Dashboard",
-  "suppressNotifications": ["prIgnoreNotification"],
+  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
   "commitBodyTable": true,
-  "rebaseWhen": "auto"
+  "rebaseWhen": "conflicted",
+  "platformCommit": true
 }
