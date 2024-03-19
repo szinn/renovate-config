@@ -146,6 +146,13 @@
       "semanticCommitScope": "github-action",
       "commitMessageTopic": "{{depName}}",
       "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
+    },
+    {
+      "matchManagers": ["nix"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
+      "commitMessageTopic": "{{depName}}"
     }
   ]
 }
