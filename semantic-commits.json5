@@ -24,14 +24,14 @@
       "commitMessageTopic": "image {{depName}}",
       "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
     },
-    {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["digest"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "container",
-      "commitMessageTopic": "image {{depName}}",
-      "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )"
-    },
+    // {
+    //   "matchDatasources": ["docker"],
+    //   "matchUpdateTypes": ["digest"],
+    //   "semanticCommitType": "chore",
+    //   "semanticCommitScope": "container",
+    //   "commitMessageTopic": "image {{depName}}",
+    //   "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )"
+    // },
     {
       "matchDatasources": ["helm"],
       "matchUpdateTypes": ["major"],

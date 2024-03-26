@@ -3,18 +3,16 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
-    ":automergeBranch",
-    ":automergeDigest",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
     ":dependencyDashboard",
     ":disableRateLimiting",
     ":enablePreCommit",
     ":semanticCommits",
-    ":separatePatchReleases",
     "github>szinn/renovate-config:automerge-github-actions.json5",
-    "github>szinn/renovate-config:generic-regex-manager.json5",
     "github>szinn/renovate-config:labels.json5",
     "github>szinn/renovate-config:semantic-commits.json5",
-    "helpers:pinGitHubActionDigests"
+    "github>szinn/renovate-config:generic-regex-manager.json5"
   ],
   "timezone": "America/Toronto",
   "dependencyDashboardTitle": "Renovate Dashboard",
