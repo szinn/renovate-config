@@ -3,9 +3,7 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
-    "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
-    ":dependencyDashboard",
     ":disableRateLimiting",
     ":enablePreCommit",
     ":semanticCommits",
