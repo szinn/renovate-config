@@ -17,5 +17,6 @@
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
   "commitBodyTable": true,
   "rebaseWhen": "conflicted",
-  "platformCommit": true
+  "platformCommit": true,
+  "prBodyTemplate": "{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}"
 }
