@@ -4,18 +4,17 @@
     "config:recommended",
     "docker:enableMajor",
     "helpers:pinGitHubActionDigests",
-    ":disableRateLimiting",
     ":enablePreCommit",
     ":semanticCommits",
+    ":automergeBranch",
+    "github>szinn/renovate-config:automerge-github-actions.json5",
     "github>szinn/renovate-config:labels.json5",
-    "github>szinn/renovate-config:semantic-commits.json5",
-    "github>szinn/renovate-config:generic-regex-manager.json5"
+    "github>szinn/renovate-config:generic-regex-manager.json5",
+    ":disableRateLimiting"
   ],
   "timezone": "America/Toronto",
   "dependencyDashboardTitle": "Renovate Dashboard",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
   "commitBodyTable": true,
-  "rebaseWhen": "conflicted",
-  "platformCommit": true,
   "prBodyTemplate": "{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}"
 }
