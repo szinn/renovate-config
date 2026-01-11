@@ -18,7 +18,7 @@
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( repository=(?<registryUrl>\\S+))?( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?( extractVersion=(?<extractVersion>\\S+))?\\n.+(:\\s|=)(&\\S+\\s)?(?<currentValue>\\S+)",
         // # renovate: datasource=docker depName=ghcr.io/prometheus-operator/prometheus-operator
         // https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.80.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagerconfigs.yaml
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.+/(?<currentValue>(v|\\d)[^/]+)( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?( extractVersion=(?<extractVersion>\\S+))?"
+        // "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.+/(?<currentValue>(v|\\d)[^/]+)( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?( extractVersion=(?<extractVersion>\\S+))?"
       ],
       datasourceTemplate: "{{{datasource}}}",
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
